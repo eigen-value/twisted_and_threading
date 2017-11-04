@@ -7,7 +7,7 @@ from server import port
 from server import MyFactory
 
 
-service = ServiceUsingThreadingAndDeferred()
+third_party_service = ServiceUsingThreadingAndDeferred()
 
 # Application set-up
 application = service.Application("appName")
@@ -19,4 +19,4 @@ protocol_factory = MyFactory()
 my_server = internet.TCPServer(port, protocol_factory)
 my_server.setServiceParent(application)
 
-reactor.callLater(1, service.start)
+reactor.callLater(1, third_party_service.start)

@@ -3,11 +3,11 @@ from outside import ServiceUsingThreadingAndDeferred
 from server import port
 from server import MyFactory
 
-service = ServiceUsingThreadingAndDeferred()
+third_party_service = ServiceUsingThreadingAndDeferred()
 
 protocol_factory = MyFactory()
 reactor.listenTCP(port, protocol_factory)
 
-service.start()
+third_party_service.start()
 
 reactor.run()
