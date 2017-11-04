@@ -15,4 +15,4 @@ Interestingly the 3rd party service start message is STILL printed to stdout:
 
 This will log to twistd.log (3rd party start message AS WELL) and will work as expected:
 
-*$ twistd -y working.tac  #will work and log t*
+*$ twistd -y working.tac*
